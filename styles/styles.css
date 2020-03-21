@@ -196,6 +196,10 @@ nav.scrolled{
 
 #home {
 	background: #051937;
+	background-image: url('../images/header-img.jpg');
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 	height: 100vh;
 	overflow: hidden;
 	padding: 0px;

@@ -9,7 +9,7 @@
 	var pageTitle = $("title").text();
 
 	$(window).blur(function() {
-	  	$("title").text("Hey..👋");
+	  	$("title").text("👋");
 	});
 
 	$(window).focus(function() {
@@ -26,6 +26,8 @@
 			$('#scrollToTop').fadeOut();
 		}
 	});
+
+	
 
 	$(document).ready(function() {
 		$(this).scrollTop(0);
@@ -51,6 +53,13 @@
 		$('.navbar-collapse').collapse('hide');
 
 		$('.navLogo').click(function() {
+			if ($('.menuIcon').hasClass('open')) {
+				$('.menuIcon').removeClass('open');
+				$('.navbar-collapse').collapse('hide');
+			}
+		});
+
+		$('.introSectionScroll').click(function() {
 			if ($('.menuIcon').hasClass('open')) {
 				$('.menuIcon').removeClass('open');
 				$('.navbar-collapse').collapse('hide');

@@ -304,6 +304,14 @@ a {
   transition: all 0.5s;
 }
 
+#about p {
+  margin-bottom: 0;	
+}
+
+#about h4 {
+  margin-bottom: 1.5rem;	
+}
+
 .img-fluid {
   border-radius: 10px;
   filter: grayscale(0%);

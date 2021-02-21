@@ -1,136 +1,143 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
-  <head>
+<head>
     <title>Dan Lawson | Software Developer Technician</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>  
-    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="content/images/dan_lawson_favicon.ico" rel="icon" type="image/ico">
     <link href="https://fonts.googleapis.com/css?family=Kulim+Park&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://kit.fontawesome.com/06b710d62a.js" crossorigin="anonymous"></script>
-    <script src="styles/scripts.js"></script>
-  </head>
-	
-  <body>
-    <div class="row h-100 pageLoad">
-      <div class="col-sm-12 my-auto">
-        <img id="loadingImage" src="images/danlawson-logo.png">
-        <h1>LOADING</h1>
-        <div class="loadingDots">
-          <span></span>
-          <span></span>
-          <span></span>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="content/css/site.css" rel="stylesheet" type="text/css">
+    <link href="content/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="pageLoad" class="row pageLoad center">
+        <div class="col-sm-12 my-auto">
+            <img src="content/images/dan_lawson_page_load.gif" style="height: 200px;">
         </div>
-      </div>
     </div>
-	
-    <nav class="navbar fixed-top navbar-expand-sm navbar-dark justify-content-between">
-      <a class="navbar-brand" href="#home">
-        <img class="navLogo" src="images/danlawson-logo.png" alt="Dan Lawson Logo">
-      </a>
-      <button class="navbar-toggler menuButton" type="button" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <div class="menuIcon">
-          <span></span>
-          <span></span>
-          <span></span>
+    <nav id="navbar" class="navbar fixed-top navbar-expand-sm">
+        <a href="#intro" onclick="site.resetNavbar();" class="navbar-brand">
+            <img src="content/images/dan_lawson_logo.png" alt="Dan Lawson Logo">
+        </a>
+        <button id="menuBurgerButton" class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navDropdown" aria-controls="navDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>	  
+        <div id="navDropdown" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a href="#about" onclick="site.resetNavbar();" class="nav-link">
+                        About
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#connect" onclick="site.resetNavbar();" class="nav-link">
+                        Connect
+                    </a>
+                </li>
+            </ul>
         </div>
-      </button>	  
-      <div id="navbarNavDropdown" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#connect">Connect</a>
-          </li>
-        </ul>
-      </div>
     </nav>
-
-    <section id="home">
-      <div class="col-sm-12 introText">
-        <h1>Hello, I am</h1>
-        <h1 style="color: #1a55c4;">Dan Lawson.</h1>
-      </div>
-      <a href="#about">
-        <i class="fas fa-chevron-down introSectionScroll"></i>
-      </a>
-    </section>
-
-    <a href="#home">
-      <i class="fas fa-chevron-up scrollToTop"></i>
-    </a>
-	
-    <div class="container">
-      <section>
-
-      </section>
-      <section id="about">
-        <div class="row">
-          <div class="col-sm-12">
-            <h1>About</h1>
-            <h2>A tiny insight..</h2>
-          </div>
-          <div class="col-sm-8">
-            <p><i class="fas fa-map-marked-alt"></i> Location: </p>
-	    <h4>Stamford, UK</h4>
-	    <p><i class="fas fa-user-tie"></i> Employment: </p>
-            <h4>Apprentice Software Developer Technician at <a href="https://www.mrisoftware.com/uk/" target="_blank">MRI Software</a>.</h4>
-            <p><i class="fas fa-birthday-cake"></i> Age: </p>
-            <h4>26</h4>
-          </div>
-          <div class="col-sm-4">
-            <img src="images/professional-photo.png" class="img-fluid" alt="Dan Lawson Professional Photo">
-          </div>
-        </div>
-      </section>
-				
-      <section id="contact">
-        <div class="row">
-          <div class="col-sm-12">
-            <h1>Contact</h1>
-            <h2>Drop me an email and say hello!</h2>
-          </div>
-          <div id="icons" class="col-sm-12">
-            <a class="button email" href="mailto:dan@danlawson.co.uk?subject=Hello">
-              <i class="fas fa-envelope"></i>
-            </a>
-            <i class="far fa-hand-point-right"></i>
-          </div>
-        </div>
-      </section>
-				
-      <section id="connect">
-        <div class="row">
-          <div class="col-sm-12">
-            <h1>Connect</h1>
-            <h2>Stay in the loop.</h2>
-          </div>
-          <div id="icons" class="col-md">
-            <a href="https://www.linkedin.com/in/danlawson-dev/" target="_blank">
-              <i class="fab fa-linkedin-in socialIcons" alt="Dan Lawson LinkedIn Profile"></i>
-            </a>
-          </div>
-          <div id="icons" class="col-md">
-            <a href="https://github.com/danlawson-dev" target="_blank">
-              <i class="fab fa-github socialIcons" alt="Dan Lawson GitHub Profile"></i>
-            </a>
-          </div>
-        </div>
-      </section>	
+    <div>
+        <a href="#intro" onclick="site.resetNavbar();" id="scrollToTopButton" class="scrollToTop">
+            <i class="icon bi bi-arrow-up-short"></i>
+            <p>TOP</p>
+        </a>
     </div>
-		
-    <footer class="footer">
-      <small>© 2021 Dan Lawson</small>
-    </footer>		
-	
-  </body>
-	
+    <div id="intro">
+        <div class="row h-100">
+            <div class="col-7 m-auto">
+                <div class="row">
+                    <div id="introText" class="col-md-6 col-12 text-md-start text-center my-auto">
+                        <h2>Hello, I am</h2>
+                        <h1>Dan Lawson</h1>
+                        <p>Software Developer Technician.</p>
+                    </div>
+                    <div class="col-md-6 col-sm-8 col-12 mx-auto">
+                        <div class="p-4">
+                            <img class="photo" src="/content/images/intro/professional-photo.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row bottom">
+            <div class="col text-center bouncing">
+                <a href="#about">
+                    <i class="icon bi bi-chevron-compact-down"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="row p-5">
+            <div class="col-lg-4 col-12 text-center">
+                <div class="aboutDetail p-3">
+                    <i class="icon bi bi-calendar4-week"></i>
+                    <h1>26</h1>
+                    <p>Years Old</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-12 text-center">
+                <div class="aboutDetail p-3">
+                    <i class="icon bi bi-geo"></i>
+                    <h1>Colsterworth</h1>
+                    <p>Lincolnshire</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-12 text-center">
+                <div class="aboutDetail p-3">
+                    <i class="icon bi bi-code-slash"></i>
+                    <h1>MRI Software</h1>
+                    <p>Software Developer Technician Apprentice</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="connect">
+        <div class="row center p-5">
+            <div class="col-sm-6 col-12">
+                <img class="photo" src="/content/images/connect/phone-light.png">
+            </div>
+            <div class="col-sm-6 col-12 p-1">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <a href="https://www.linkedin.com/in/danlawson-dev/" target="_blank">
+                            <i class="icon bi bi-linkedin"></i>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <a href="https://github.com/danlawson-dev" target="_blank">
+                            <i class="icon bi bi-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row p-3">
+            <div class="emailDetail col-md-6 col-12 text-center p-4 m-auto">
+                <h3>Why not drop me an email and say hello?</h3>
+                <a class="col-lg-6 col-md-12 col-sm-6 col-12 btn mt-4" href="mailto:dan@danlawson.co.uk?subject=Hey Dan!">
+                    <i class="icon bi bi-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="row text-center">
+            <div class="col p-3">
+                <p>&copy; <span id="copyrightYear"></span> Dan Lawson</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="content/js/site.js"></script>
+    <script src="content/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

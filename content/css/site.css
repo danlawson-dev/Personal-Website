@@ -223,7 +223,7 @@ h1 {
     padding-left: 3px;
 }
 
-#intro .photo {
+#intro img {
     box-shadow: 60px 30px var(--brand-colour-4),
                 -40px 15px var(--brand-colour-1),
                 35px -22.5px var(--brand-colour-3);
@@ -336,7 +336,7 @@ h1 {
 }
 
 /* CONNECT SECTION */
-#connect .photo {
+#connect img {
     filter: drop-shadow(-10px 20px 20px var(--shadow-colour));
     max-height: 375px;
     transform: rotate(-10deg);

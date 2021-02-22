@@ -46,7 +46,7 @@ const site = {
         }
         if (window.scrollY > 320) {
             // Show scroll to top button
-            site.scrollToTopButton.style.bottom = '-25px';
+            site.scrollToTopButton.style.bottom = '-30px';
         }
     },
     menuBurgerButtonClicked: function() {

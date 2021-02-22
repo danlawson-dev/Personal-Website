@@ -43,10 +43,6 @@ h1 {
     color: var(--brand-colour-1) !important;
 }
 
-.icon {
-    font-size: 50px;
-}
-
 .center {
     align-items: center;
     justify-content: center;
@@ -68,6 +64,10 @@ h1 {
     position: fixed;
     width: 100%;
     z-index: 9999;
+}
+
+.pageLoad img {
+    height: 250px;
 }
 
 /* NAVBAR SECTION */
@@ -203,18 +203,8 @@ h1 {
 
 .scrollToTop:hover {
     border-color: var(--brand-colour-1);
-    bottom: -5px !important;
+    bottom: -1px !important;
     color: var(--brand-colour-1);
-}
-
-.scrollToTop .icon {
-    bottom: 10px;
-    position: relative;
-}
-
-.scrollToTop p {
-    bottom: 25px;
-    position: relative;
 }
 
 /* INTRO SECTION */
@@ -240,13 +230,13 @@ h1 {
     width: 100%;
 }
 
-#intro .icon {
+#intro .bi-chevron-compact-down {
     color: var(--brand-colour-1) !important;
     opacity: 0.1;
     transition: opacity 0.25s ease-in;
 }
 
-#intro .icon:hover {
+#intro .bi-chevron-compact-down:hover {
     opacity: 0.5;
 }
 
@@ -341,7 +331,7 @@ h1 {
     transform: translateY(-0.75rem);
 }
 
-.aboutDetail:hover .icon {
+.aboutDetail:hover .bi {
     color: var(--brand-colour-1);
 }
 

@@ -61,4 +61,11 @@ const site = {
     }
 };
 
-site.init();
+// If the browser is IE, redirect it to the error page
+var isIE = /*@cc_on!@*/false || !!document.documentMode;
+if (isIE) {
+    window.location.href = "http://127.0.0.1:5500/error.html";
+}
+else {
+    site.init();
+}

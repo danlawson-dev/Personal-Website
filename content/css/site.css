@@ -1,6 +1,5 @@
 /* COLOUR SCHEME */
 :root {
-    --intro-bg: url(/content/images/intro/intro-bg.jpg) center top / cover no-repeat fixed;
     --brand-colour-1: #1a55c4;
     --brand-colour-2: #fff;
     --brand-colour-3: #173558;
@@ -57,6 +56,10 @@ h1 {
     right: 0;
 }
 
+.drop-shadow {
+    filter: drop-shadow(-10px 20px 20px var(--shadow-colour));
+}
+
 /* PAGE LOAD */
 .pageLoad {
     background: var(--brand-colour-1);
@@ -72,15 +75,13 @@ h1 {
 
 /* NAVBAR SECTION */
 .navbar {
-    background: transparent;
+    background: var(--brand-colour-1);
     height: 125px;
-    padding: 0px 35px;
+    padding: 0px 75px;
     transition: all 0.5s ease;
 }
 
 .navbar.scrolled {
-    background: var(--brand-colour-1);
-    box-shadow: 0px -10px 15px 15px var(--shadow-colour);
     height: 100px;
 }
 
@@ -154,14 +155,10 @@ h1 {
 }
 
 .nav-link {
-    color: var(--brand-colour-3) !important;
+    color: #fff !important;
     opacity: 1;
     text-align: center;
     transition: opacity 0.25s ease-out !important;
-}
-
-.scrolled .nav-link {
-    color: #fff !important;
 }
 
 .nav-link:hover {
@@ -169,19 +166,22 @@ h1 {
 }
 
 @media only screen and (max-width: 575px) {
+    .navbar {
+        padding: 0px 25px;
+    }
+
     .navbar-collapse {
         background: var(--brand-colour-1) !important;
         border-radius: var(--border-radius);
-        left: 0;
-        margin: 10px auto !important;
         position: absolute;
-        right: 0;
-        top: 95px;
-        width: 75% !important;
+        right: 25px;
+        top: 85px;
+        transition: top 0.5s ease;
+        width: 200px !important;
     }
 
-    .nav-link {
-        color: #fff !important;
+    .scrolled .navbar-collapse {
+        top: 75px;
     }
 }
 
@@ -209,12 +209,12 @@ h1 {
 
 /* INTRO SECTION */
 #intro {
-    background: var(--intro-bg);
+    background: var(--brand-colour-1);
     height: 100vh;
 }
 
 #intro h1 {
-    color: var(--brand-colour-1);
+    color: var(--brand-colour-2);
     font-size: 50px;
     line-height: 45px;
 }
@@ -224,14 +224,12 @@ h1 {
 }
 
 #intro img {
-    box-shadow: 60px 30px var(--brand-colour-4),
-                -40px 15px var(--brand-colour-1),
-                35px -22.5px var(--brand-colour-3);
-    width: 100%;
+    border: 15px solid #fff;
+    transform: rotate(5deg);
 }
 
 #intro .bi-chevron-compact-down {
-    color: var(--brand-colour-1) !important;
+    color: var(--brand-colour-2) !important;
     opacity: 0.1;
     transition: opacity 0.25s ease-in;
 }
@@ -337,9 +335,8 @@ h1 {
 
 /* CONNECT SECTION */
 #connect img {
-    filter: drop-shadow(-10px 20px 20px var(--shadow-colour));
     max-height: 375px;
-    transform: rotate(-10deg);
+    transform: rotate(-5deg);
 }
 
 .bi-linkedin, .bi-github {

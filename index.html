@@ -7,20 +7,20 @@
         <meta name="description" content="Personal portfolio website for Dan Lawson.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <link href="content/images/dan_lawson_favicon.ico" rel="icon" type="image/ico">
+        <link href="assets/images/dan_lawson_favicon.ico" rel="icon" type="image/ico">
         <link href="https://fonts.googleapis.com/css?family=Kulim+Park&display=swap" rel="stylesheet">
-        <link href="content/css/site.css" rel="stylesheet" type="text/css">
-        <link href="content/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/stylesheets/css/site.css" rel="stylesheet" type="text/css">
+        <link href="assets/stylesheets/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
         <div id="pageLoad" class="row pageLoad center">
             <div class="col-sm-12 my-auto">
-                <img src="content/images/dan_lawson_page_load.gif" alt="Dan Lawson Page Load Gif Animation">
+                <img src="assets/images/dan_lawson_page_load.gif" alt="Dan Lawson Page Load Gif Animation">
             </div>
         </div>
         <nav id="navbar" class="navbar fixed-top navbar-expand-sm">
             <a href="#intro" onclick="site.resetNavbar();" class="navbar-brand">
-                <img src="content/images/dan_lawson_logo.png" alt="Dan Lawson Logo">
+                <img src="assets/images/dan_lawson_logo.png" alt="Dan Lawson Logo">
             </a>
             <button id="menuBurgerButton" class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navDropdown" aria-controls="navDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span></span>
@@ -50,8 +50,8 @@
                 <p>TOP</p>
             </a>
         </div>
-        <div id="intro">
-            <div class="row h-100">
+        <div id="intro" class="d-flex flex-column">
+            <div class="row m-auto">
                 <div class="col-7 m-auto">
                     <div class="row">
                         <div id="introText" class="col-lg-6 col-12 py-4 text-lg-start text-center my-auto">
@@ -60,12 +60,12 @@
                             <p>Software Developer.</p>
                         </div>
                         <div class="col-lg-6 col-sm-8 col-12 mx-auto">
-                            <img class="img-fluid drop-shadow" src="/content/images/intro/professional-photo.png" alt="Professional Photo">
+                            <img class="img-fluid drop-shadow" src="assets/images/intro/professional-photo.png" alt="Professional Photo">
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row bottom">
+            <div class="row pt-5">
                 <div class="col text-center bouncing">
                     <a href="#about">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
@@ -110,7 +110,7 @@
         <div id="connect">
             <div class="row center p-5">
                 <div class="col-sm-6 col-12 py-4">
-                    <img class="drop-shadow" src="/content/images/connect/phone-light.png" alt="Phone (Light) Displaying LinkedIn Profile">
+                    <img class="drop-shadow" src="assets/images/connect/phone-light.png" alt="Phone (Light) Displaying LinkedIn Profile">
                 </div>
                 <div class="col-sm-6 col-12 p-1">
                     <div class="row">
@@ -150,7 +150,7 @@
             </div>
         </div>
 
-        <script src="content/js/site.js"></script>
-        <script src="content/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/scripts/site.js"></script>
+        <script src="assets/scripts/bootstrap.bundle.min.js"></script>
     </body>
 </html>

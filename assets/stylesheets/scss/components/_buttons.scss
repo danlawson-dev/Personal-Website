@@ -1,0 +1,17 @@
+@use '../abstracts/colours';
+@use '../abstracts/borders';
+
+@use 'scrollToTopButton';
+
+.btn {
+    background: colours.$brand-colour-1 !important;
+    border: 3px solid colours.$brand-colour-1 !important;
+    border-radius: borders.$radius !important;
+    color: colours.$brand-colour-2 !important;
+    transition: background 0.25s ease-out !important;
+
+    &:hover {
+        background: transparent !important;
+        color: colours.$brand-colour-1 !important;
+    }
+}

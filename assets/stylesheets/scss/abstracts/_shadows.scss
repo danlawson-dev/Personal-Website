@@ -1,0 +1,5 @@
+@use 'colours';
+
+$shadow-original-negative: drop-shadow(-10px 20px 20px colours.$shadow-colour);
+$shadow-original-positive: drop-shadow(10px 20px 20px colours.$shadow-colour);
+$shadow-hover: drop-shadow(0px 10px 10px colours.$shadow-colour);

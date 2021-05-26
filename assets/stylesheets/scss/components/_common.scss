@@ -1,0 +1,25 @@
+@use '../abstracts/colours';
+@use '../abstracts/fonts';
+
+* {
+    font-weight: fonts.$weight !important;
+    margin: 0 !important;
+}
+
+body {
+    color: colours.$brand-colour-3 !important;
+    background: colours.$brand-colour-2;
+    font-family: fonts.$family !important;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-weight: fonts.$h1-weight !important;
+}
+
+.center {
+    align-items: center;
+    justify-content: center;
+    place-content: center;
+    text-align: center;
+}

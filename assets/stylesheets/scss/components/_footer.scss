@@ -1,0 +1,7 @@
+@use '../abstracts/fonts';
+
+.footer {
+    p {
+        font-size: fonts.$footer-font-size;
+    }
+}

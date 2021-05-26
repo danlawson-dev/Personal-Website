@@ -1,0 +1,133 @@
+@use '../abstracts/borders';
+@use '../abstracts/colours';
+@use '../abstracts/shadows';
+
+$start-height: 125px;
+$scrolled-height: 100px;
+
+.navbar {
+    background: colours.$brand-colour-1;
+    height: $start-height;
+    padding: 0px 75px;
+    transition: all 0.5s ease;
+
+    img {
+        width: 60px;
+    }
+
+    &.scrolled {
+        height: $scrolled-height;
+    }
+}
+
+@mixin navbar-toggler-common {
+    border: 0px solid transparent !important;
+    box-shadow: 0 0 0 0 !important;
+    height: 20px;
+    opacity: 1;  
+    position: relative;
+    width: 30px;
+    transform: rotate(0deg);
+    transition: opacity 0.25s ease-out !important;
+}
+
+.navbar-toggler {
+    @include navbar-toggler-common;
+
+    &:focus, &:active {
+        @include navbar-toggler-common;
+    }
+
+    span {
+        background: #fff;
+        display: block;
+        height: 2.5px;
+        position: absolute;
+        right: 0;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+        width: 100%;
+
+        &:nth-child(1) {
+            top: 0px;
+        }
+
+        &:nth-child(2) {
+            top: 8.75px;
+        }
+
+        &:nth-child(3) {
+            bottom: 0px;
+        }
+    }
+
+    &:hover {
+        opacity: 0.5;
+
+        span {
+            &:nth-child(1) {
+                width: 33%;
+            }
+
+            &:nth-child(2) {
+                width: 66%;
+            }
+        }
+    }
+
+    &.open {
+        span {
+            &:nth-child(1) {
+                top: 8.75px;
+                transform: rotate(-45deg);
+                width: 100%;
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+                width: 0%;
+            }
+
+            &:nth-child(3) {
+                bottom: 8.75px;
+                transform: rotate(45deg);
+                width: 100%;
+            }
+        }
+    }
+}
+
+.nav-link {
+    color: #fff !important;
+    opacity: 1;
+    text-align: center;
+    transition: opacity 0.25s ease-out !important;
+
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .navbar {
+        padding: 0px 25px;
+    }
+
+    .navbar-collapse {
+        background: colours.$brand-colour-1 !important;
+        border-radius: borders.$radius;
+        position: absolute;
+        right: 25px;
+        top: 85px;
+        transition: top 0.5s ease;
+        width: 200px !important;
+
+        &.drop-shadow {
+            filter: shadows.$shadow-hover;
+        }
+    }
+
+    .scrolled .navbar-collapse {
+        top: 75px;
+    }
+}

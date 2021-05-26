@@ -1,0 +1,130 @@
+@use '../abstracts/animations';
+@use '../abstracts/borders';
+@use '../abstracts/colours';
+@use '../abstracts/shadows';
+
+@use 'navbar';
+
+@mixin section-scroll-margin {
+    scroll-margin-top: navbar.$scrolled-height;
+}
+
+@mixin social-icons-common {
+    color: colours.$social-icons-colour !important;
+    font-size: 120px;
+    transition: color 0.25s ease-out;
+}
+
+#intro {
+    background: colours.$brand-colour-1;
+    min-height: 100vh;
+    padding-top: navbar.$start-height + 50px;
+
+    h1 {
+        color: colours.$brand-colour-2;
+        font-size: 50px;
+        line-height: 45px;
+    }
+
+    p {
+        padding-left: 3px;
+    }
+
+    img {
+        border: 15px solid #fff;
+        transform: rotate(5deg);
+        transition: filter 0.25s ease-out,
+                    transform 0.25s ease-out;
+
+        &.drop-shadow {
+            filter: shadows.$shadow-original-positive;
+        }
+
+        &:hover {
+            transform: rotate(3deg) scale(1.1, 1.1);
+
+            &.drop-shadow {
+                filter: shadows.$shadow-hover;
+            }
+        }
+    }
+
+    .bi-chevron-compact-down {
+        color: colours.$brand-colour-2 !important;
+        opacity: 0.1;
+        transition: opacity 0.25s ease-in;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    #intro {
+        padding-top: navbar.$start-height;
+    }
+}
+
+#about {
+    @include section-scroll-margin;
+    background: colours.$brand-colour-4;
+
+    .aboutDetail {
+        color: colours.$brand-colour-3;
+        height: 100%;
+        transition: transform 0.25s ease-out;
+
+        &:hover {
+            transform: translateY(-0.75rem);
+
+            .bi {
+                color: colours.$brand-colour-1;
+            }
+        }
+    }
+}
+
+#connect {
+    @include section-scroll-margin;
+
+    img {
+        max-height: 375px;
+        transform: rotate(-5deg);
+        transition: filter 0.25s ease-out,
+                    transform 0.25s ease-out;
+
+        &.drop-shadow {
+            filter: shadows.$shadow-original-negative;
+        }
+
+        &:hover {
+            transform: rotate(-4deg) scale(1.05, 1.05);
+
+            &.drop-shadow {
+                filter: shadows.$shadow-hover;
+            }
+        }
+    }
+
+    .bi-linkedin {
+        @include social-icons-common;
+
+        &:hover {
+            color: colours.$linkedin-hover-colour !important;
+        }
+    }
+    
+    .bi-github {
+        @include social-icons-common;
+
+        &:hover {
+            color: colours.$github-hover-colour !important;
+        }
+    }
+    
+    .emailDetail {
+        background: colours.$brand-colour-4;
+        border-radius: borders.$radius;
+    }
+}

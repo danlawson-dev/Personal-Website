@@ -1,0 +1,23 @@
+@use '../abstracts/borders';
+@use '../abstracts/colours';
+
+.scrollToTop {
+    background: colours.$brand-colour-4;
+    border: 1px solid colours.$shadow-colour;
+    border-radius: borders.$radius borders.$radius 0px 0px;
+    bottom: -80px;
+    color: colours.$brand-colour-3;
+    position: fixed;
+    height: 80px;
+    right: 15px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.25s ease-out;
+    z-index: 99;
+
+    &:hover {
+        border-color: colours.$brand-colour-1;
+        bottom: -1px !important;
+        color: colours.$brand-colour-1;
+    }
+}

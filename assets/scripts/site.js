@@ -48,6 +48,15 @@ const site = {
 
         // Update the years old value on the web page
         document.getElementById('yearsOldCalc').textContent = yearCalc;
+
+        // If today is my birthday, add appropriate styling to the section
+        if (monthCalc == 0 && dayCalc == 0) {
+            document.getElementById('birthday').classList.add('isToday');
+            document.getElementById('yearsOldDesc').textContent = 'TODAY';
+        }
+        else {
+            document.getElementById('yearsOldDesc').textContent = 'Years Old';
+        }
     },
     setCopyrightYear: function() {
         // Set current year in the footer copyright text

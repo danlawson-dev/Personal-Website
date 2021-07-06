@@ -71,6 +71,7 @@
     background: colours.$brand-colour-4;
 
     .aboutDetail {
+        border-radius: borders.$radius;
         color: colours.$brand-colour-3;
         height: 100%;
         transition: transform 0.25s ease-out;
@@ -81,6 +82,12 @@
             .bi {
                 color: colours.$brand-colour-1;
             }
+        }
+
+        &.isToday {
+            background: url(/assets/images/about/birthday-background.jpg) center no-repeat;
+            background-size: cover;
+            color: colours.$brand-colour-2;
         }
     }
 }

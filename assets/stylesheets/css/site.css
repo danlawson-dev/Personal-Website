@@ -240,6 +240,7 @@ h1 {
   background: #d5e0f3;
 }
 #about .aboutDetail {
+  border-radius: 1rem;
   color: #173558;
   height: 100%;
   transition: transform 0.25s ease-out;
@@ -249,6 +250,11 @@ h1 {
 }
 #about .aboutDetail:hover .bi {
   color: #1a55c4;
+}
+#about .aboutDetail.isToday {
+  background: url(/assets/images/about/birthday-background.jpg) center no-repeat;
+  background-size: cover;
+  color: #fff;
 }
 
 #connect {

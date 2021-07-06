@@ -88,6 +88,12 @@
             background: url(/assets/images/about/birthday-background.jpg) center no-repeat;
             background-size: cover;
             color: colours.$brand-colour-2;
+
+            &:hover {    
+                .bi {
+                    color: colours.$brand-colour-4;
+                }
+            }
         }
     }
 }

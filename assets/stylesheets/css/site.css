@@ -256,6 +256,9 @@ h1 {
   background-size: cover;
   color: #fff;
 }
+#about .aboutDetail.isToday:hover .bi {
+  color: #d5e0f3;
+}
 
 #connect {
   scroll-margin-top: 100px;

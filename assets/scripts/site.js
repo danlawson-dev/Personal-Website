@@ -1,4 +1,6 @@
 const site = {
+    introOverflow: 0,
+    alreadyScrolled: false,
     navbar: document.getElementById('navbar'),
     menuBurgerButton: document.getElementById('menuBurgerButton'),
     scrollToTopButton: document.getElementById('scrollToTopButton'),
@@ -8,12 +10,26 @@ const site = {
     },
     onReady: function() {
         setTimeout(function() {
+            site.setIntroOverflow();
             site.addListeners();
             site.scrollToTop();
             site.setAge();
             site.setCopyrightYear();
             site.hideLoad();
         }, 3750);
+    },
+    setIntroOverflow: function() {
+        // Get the device screen height
+        let deviceHeight = window.innerHeight;
+
+        // Get the intro section height
+        let introSectionHeight = document.getElementById('intro').scrollHeight;
+
+        // Work out the difference between the intro height and device screen height
+        let difference = introSectionHeight - deviceHeight;
+
+        // Set the intro overflow variable to the difference, plus 175 to use when activating the age increment animation
+        site.introOverflow = difference + 175;
     },
     addListeners: function() {
         window.addEventListener('scroll', site.watchScrollY);
@@ -46,8 +62,8 @@ const site = {
             yearCalc--;
         }
 
-        // Update the years old value on the web page
-        document.getElementById('yearsOldCalc').textContent = yearCalc;
+        // Set the data-target attribute for animation when scrolled
+        document.getElementById('yearsOldCalc').setAttribute('data-target', yearCalc);
 
         // If today is my birthday, add appropriate styling to the section
         if (monthCalc == 0 && dayCalc == 0) {
@@ -75,6 +91,14 @@ const site = {
             // Add 'scrolled' css styling to navbar
             site.navbar.classList.add('scrolled');
         }
+        if (window.scrollY > site.introOverflow && 
+            !site.alreadyScrolled) {
+            // Animate the 'Years Old' value from 0 to target
+            site.updateAgeCount();
+
+            // Update boolean so the animation does not happen again
+            site.alreadyScrolled = true;
+        }
         if (window.scrollY <= 320) {
             // Hide scroll to top button from view
             site.scrollToTopButton.style.bottom = '-80px';
@@ -83,6 +107,26 @@ const site = {
             // Show scroll to top button
             site.scrollToTopButton.style.bottom = '-30px';
         }
+    },
+    updateAgeCount: function() {
+        // Get the element to read and write to
+        let countElement = document.getElementById('yearsOldCalc');
+
+        // Get the target value and current value of the element as a number (+)
+        let targetValue = +countElement.getAttribute('data-target');
+		let currentValue = +countElement.textContent;
+
+		// Check to see if the target value has been reached
+		if (currentValue < targetValue) {
+			// Add 1 to the current value and update the web page value
+			countElement.textContent = ++currentValue;
+			
+            // Run this function again in 0.025 seconds
+			setTimeout(site.updateAgeCount, 25);
+		}
+        else {
+			countElement.textContent = targetValue;
+		}
     },
     menuBurgerButtonClicked: function() {
         // Toggle 'open' css styling for menu burger menu
